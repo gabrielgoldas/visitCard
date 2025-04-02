@@ -1,0 +1,77 @@
+.main {
+  color: var();
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.content {
+  color: #fdfdfd;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  
+  h1 {
+    text-align: center;
+    margin: 2rem;
+  }
+
+  input {
+    font-family: "Montserrat", sans-serif;
+    color: #fdfdfd;
+  }
+
+  button {
+    padding: .5rem 1.25rem;
+  }
+}
+
+.form-field {
+  margin-bottom: .8rem;
+
+  input {
+    display: block;
+    border: none;
+    background-color: #3c4053;
+    border-radius: .2rem;
+    padding: .5rem;
+
+    &.ng-invalid.ng-touched {
+      border: 1px solid #dd5656;
+    }
+  }
+}
+
+.visit-card {
+
+  .fullname {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+footer {
+  font-size: .85rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  background-color: #161824c4;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .75rem;
+  padding: .75rem;
+
+  p {
+    color: #5d5d5e;
+  }
+  a {
+    color: #bdbdbd;
+    text-decoration: none;
+  }
+}
