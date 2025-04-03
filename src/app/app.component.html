@@ -1,8 +1,9 @@
 <main class="main">
-  <div class="content">
+  <h1>Visit Card</h1>
+  <h3>Crie seu Cartão de Visitas</h3>
 
+  <div class="content">
     <form [formGroup]="form" class="form">
-      <h1>Crie seu Cartão de Visitas</h1>
 
       <div class="form-field">
         <label for="fullname">Nome completo: </label>
@@ -25,7 +26,7 @@
       </div>
 
       <div formGroupName="address">
-        <h3>Endereço</h3>
+        <h4>Endereço</h4>
         <div class="form-field">
           <label for="street">Rua: </label>
           <input id="street" type="text" formControlName="street" />
@@ -55,14 +56,24 @@
 
     @if (submitted) {
     <div class="visit-card">
-      <h2 id="fullname">{{ form.value.fullname }}</h2>
-      <p class="others">{{ form.value.age }}</p>
-      <p class="contact">{{ form.value.phone }}</p>
-      <p class="contact">{{ form.value.email }}</p>
-      <p class="others">{{ form.value.address?.street }}</p>
-      <p class="others">{{ form.value.address?.number }}</p>
-      <p class="others">{{ form.value.address?.neighborhood }}</p>
-      <p class="others">{{ form.value.address?.city }}</p>
+      <div class="fullname">
+        <h2 id="fullname">{{ form.value.fullname }}</h2>
+      </div>
+      <div class="others">
+        <div class="contacts">
+          <p>{{ form.value.phone }}</p>
+          <p>{{ form.value.email }}</p>
+        </div>
+        <div class="address">
+          <p>Idade: {{ form.value.age }}</p>
+          <p>
+            {{ form.value.address?.street }}, 
+            {{ form.value.address?.number }}, 
+            {{ form.value.address?.neighborhood }},
+            {{ form.value.address?.city }}
+           </p>
+        </div>
+      </div>
     </div>
     }
   </div>

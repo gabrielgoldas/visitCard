@@ -25,7 +25,7 @@ export class AppComponent {
     email: ['', [Validators.required, Validators.email]],
     address: this.formBuilder.group({
       street: ['', Validators.required],
-      number: ['', Validators.min(1)],
+      number: ['', [Validators.required, Validators.min(1)]],
       neighborhood: ['', Validators.required], // bairro
       city: ['', Validators.required],
     })

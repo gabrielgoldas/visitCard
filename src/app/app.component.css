@@ -1,43 +1,68 @@
 .main {
-  color: var();
-  width: 100%;
+  color: #fdfdfd;
+  font-family: "Montserrat", sans-serif;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
+  min-width: 100%;
+  min-height: 100vh;
+
+  h1 {
+    margin-top: 2rem;
+  }
+
+  h1,
+  h3 {
+    text-align: center;
+  }
 }
 
 .content {
-  color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-family: "Montserrat", sans-serif;
-  
-  h1 {
+  padding: 1rem 1.25rem;
+  width: 100%;
+
+  h4 {
     text-align: center;
-    margin: 2rem;
   }
 
   input {
-    font-family: "Montserrat", sans-serif;
     color: #fdfdfd;
+    font-family: "Montserrat", sans-serif;
   }
+}
 
-  button {
-    padding: .5rem 1.25rem;
+button {
+  border: none;
+  border-radius: .5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin: 0 auto;
+  padding: .5rem 1.25rem;
+  transition: background-color .3s ease, transform 0.3s ease-in;
+
+  &:hover {
+    background-color: #bfc3db;
+    transform: scale(1.02);
   }
 }
 
 .form-field {
+  display: flex;
+  flex-direction: column;
   margin-bottom: .8rem;
 
   input {
-    display: block;
     border: none;
     background-color: #3c4053;
     border-radius: .2rem;
@@ -50,28 +75,180 @@
 }
 
 .visit-card {
+  background-color: #fbfbef;
+  border-radius: .5rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  color: #3c4053;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 .75rem;
+  padding: 2rem .75rem;
 
   .fullname {
+    color: #3c441d;
     font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 .5rem;
+  }
+
+  .others {
+    border-left: 1px solid #a06522;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: "Poppins", sans-serif;
+    font-size: .5rem;
+    gap: .5rem;
+    padding: 0 .5rem;
+
+    .contacts {
+      font-weight: bold;
+      color: #a06522;
+    }
+
+    .address {
+      color: #3c441d;
+    }
   }
 }
 
 footer {
-  font-size: .85rem;
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
   background-color: #161824c4;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: .75rem;
+  font-size: .85rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
   padding: .75rem;
 
   p {
     color: #5d5d5e;
   }
+
   a {
     color: #bdbdbd;
     text-decoration: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+  }
+
+  .visit-card {
+    margin: 0 1rem;
+    padding: 2rem .75rem;
+
+    .fullname {
+      font-size: 2rem;
+      padding: 0 1rem;
+    }
+
+    .others {
+      font-size: .75rem;
+      padding: 0 1rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    h1 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .form {
+    h4 {
+      font-size: 1.25rem;
+    }
+
+    .form-field {
+      font-size: 1.25rem;
+
+      input {
+        font-size: 1rem;
+      }
+    }
+
+    button {
+      font-size: 1.25rem;
+      padding: 1rem 1.75rem;
+    }
+  }
+
+  .visit-card {
+    padding: 3rem 2.25rem;
+
+    .fullname {
+      font-size: 2.5rem;
+      padding: 0 1.5rem;
+    }
+
+    .others {
+      font-size: 1rem;
+      padding: 0 1.5rem;
+    }
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main {
+    h1 {
+      font-size: 4rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+  .form {
+    h4 {
+      font-size: 1.75rem;
+    }
+
+    .form-field {
+      font-size: 1.5rem;
+
+      input {
+        font-size: 1.25rem;
+      }
+    }
+
+    button {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+    }
+  }
+
+  .visit-card {
+    padding: 3rem 2.25rem;
+
+    .fullname {
+      font-size: 3rem;
+      padding: 0 2rem;
+    }
+
+    .others {
+      font-size: 1.25rem;
+      padding: 0 2rem;
+    }
+  }
+
+  footer {
+    font-size: 1.25rem;
   }
 }
