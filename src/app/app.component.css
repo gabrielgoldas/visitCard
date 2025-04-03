@@ -181,10 +181,10 @@ footer {
 
     button {
       font-size: 1.25rem;
-      padding: 1rem 1.75rem;
+      padding: .5rem 1.75rem;
     }
   }
-
+  
   .visit-card {
     padding: 3rem 2.25rem;
 
@@ -230,7 +230,7 @@ footer {
 
     button {
       font-size: 1.5rem;
-      padding: 1rem 2rem;
+      padding: .75rem 2rem;
     }
   }
 
